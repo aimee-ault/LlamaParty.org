@@ -3,21 +3,21 @@ overflow: hidden;
 }
 
 .llama {
-animation: wacky 1s linear infinite; 
 -webkit-animation: wacky 1s linear infinite;
 -moz-animation: wacky 1s linear infinite;
+animation: wacky 1s linear infinite; 
 }
 
 .llama.weird {
-animation: wackity_wack 1s linear infinite; 
 -webkit-animation: wackity_wacky 1s linear infinite;
 -moz-animation: wackity_wacky 1s linear infinte;
+animation: wackity_wack 1s linear infinite; 
 }
 
 .main-wacky {
-animation: more_wacky 0.5 linear infinite;
 -webkit-animation: more_wacky 0.5s linear infinite; 
 -moz-animation: more_wacky 0.5s linear infinite;
+animation: more_wacky 0.5 linear infinite;
 position: absolute; 
 z-index: 1; 
 top: 25%; 
