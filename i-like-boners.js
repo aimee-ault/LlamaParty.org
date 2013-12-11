@@ -9,6 +9,29 @@ $(function (e){
 
 	var videoRecorder = $('video').get(0);
 	
+	if (navigator.getUserMedia) {
+		navigator.getUserMedia  = navigator.getUserMedia || navigator.webkitGetUserMedia ||
+	                              navigator.mozGetUserMedia || navigator.msGetUserMedia;
+	        
+	    window.cancelRequestAnimationFrame = window.cancelRequestAnimationFrame || window.webkitCancelRequestAnimationFrame || 
+	                                         window.mozCancelRequestAnimationFrame || window.msCancelRequesetAnimationFrame; 
+	                                          
+	    navigator.getUserMedia({video: true}, function(stream) {
+	              videoRecorder.src = window.URL.createObjectURL(stream);
+	              videoRecorder.play();
+	    }, function(e) {
+	    	console.error(e);
+	    });
+   } 
+	
+	var snd = new Audio("We-like-to-Party.mp3");
+		snd.addEventListener('ended', function() {
+    		this.currentTime = 0;
+ 			this.play();
+		}, false);
+	   	snd.addEventListener('canplay', function() { 
+	   		snd.play();
+	   	});
 	
 	var  $body = $('body')
 		,$window = $(window);
