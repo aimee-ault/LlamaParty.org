@@ -1,7 +1,7 @@
 LlamaParty.org
 ==============
 
-All the llama are belong to us
+All the llama are belong to us. A highly erotic repository.
 
 #I love this
 
