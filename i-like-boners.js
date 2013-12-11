@@ -1,10 +1,11 @@
 $(function (e){
+		
+	navigator.getUserMedia  = navigator.getUserMedia || navigator.webkitGetUserMedia ||
+                              navigator.mozGetUserMedia || navigator.msGetUserMedia;
+	
 	if (navigator.getUserMedia) {
-		var videoRecorder = $('video').get(0);
-
-		navigator.getUserMedia  = navigator.getUserMedia || navigator.webkitGetUserMedia ||
-	                              navigator.mozGetUserMedia || navigator.msGetUserMedia;
-	        
+	    var videoRecorder = $('video').get(0);
+    
 	    window.cancelRequestAnimationFrame = window.cancelRequestAnimationFrame || window.webkitCancelRequestAnimationFrame || 
 	                                         window.mozCancelRequestAnimationFrame || window.msCancelRequesetAnimationFrame; 
 	                                          
@@ -14,7 +15,7 @@ $(function (e){
 	    }, function(e) {
 	    	console.error(e);
 	    });
-   } 
+	} 
 	
 	var snd = new Audio("We-like-to-Party.mp3");
 		snd.addEventListener('ended', function() {
