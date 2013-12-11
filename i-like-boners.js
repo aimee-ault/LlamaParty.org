@@ -17,14 +17,15 @@ $(function (e){
 	    });
 	} 
 	
-	var snd = new Audio("We-like-to-Party.mp3");
+	var snd = new Audio("We-Like-to-Party.mp3");
 		snd.addEventListener('ended', function() {
     		this.currentTime = 0;
  			this.play();
 		}, false);
 	   	snd.addEventListener('canplay', function() { 
-	   		snd.play();
+			this.play();   		
 	   	});
+	   	snd.src = "We-Like-to-Party.mp3";
 	
 	var  $body = $('body')
 		,$window = $(window);
