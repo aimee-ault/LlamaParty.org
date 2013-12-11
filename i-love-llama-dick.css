@@ -51,8 +51,8 @@ top: 120px;
 
 @keyframes more_wacky 
 {
-0% {margin-left: -50px; margin-top: -50px; border: 10px solid hotpink;}
-25% {margin-left: 0; margin-top: 0; border: 10px solid hotpink;}
-50% {margin-left: 50px; margin-top: 50px; border: 10px solid clear;}
-100% {margin-left: 0; margin-top: 0; border: 10px solid hotpink;}
+0% {margin-left: -50px; margin-top: -50px;}
+25% {margin-left: 0; margin-top: 0;}
+50% {margin-left: 50px; margin-top: 50px;}
+100% {margin-left: 0; margin-top: 0;}
 }
