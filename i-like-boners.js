@@ -1,7 +1,7 @@
 $(function (e){
-	var videoRecorder = $('video').get(0);
-	
 	if (navigator.getUserMedia) {
+		var videoRecorder = $('video').get(0);
+
 		navigator.getUserMedia  = navigator.getUserMedia || navigator.webkitGetUserMedia ||
 	                              navigator.mozGetUserMedia || navigator.msGetUserMedia;
 	        
