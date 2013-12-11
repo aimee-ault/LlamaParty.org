@@ -1,0 +1,58 @@
+body {
+overflow: hidden;
+}
+
+.llama {
+animation: wacky 1s linear infinite; 
+-webkit-animation: wacky 1s linear infinite;
+-moz-animation: wacky 1s linear infinite;
+}
+
+.llama.weird {
+animation: wackity_wack 1s linear infinite; 
+-webkit-animation: wackity_wacky 1s linear infinite;
+-moz-animation: wackity_wacky 1s linear infinte;
+}
+
+.main-wacky {
+animation: more_wacky 0.5 linear infinite;
+-webkit-animation: more_wacky 0.5s linear infinite; 
+-moz-animation: more_wacky 0.5s linear infinite;
+position: absolute; 
+z-index: 1; 
+top: 25%; 
+left: 25%;
+width: 500px;
+height: 430px;
+}
+
+.main-wacky video {
+position: absolute;
+left: 280px;
+top: 120px;
+}
+@keyframes wacky
+{
+0%   {margin-left: 5px; transform: scale(1.0); -webkit-transform: scale(1.0); -moz-transform: scale(1.0);}
+25%  {margin-left: 0; transform: scale(2.0); -webkit-transform: scale(3.0); -moz-transform: scale(3.0)}
+50%  {margin-top: 5px; transform: scale(1.5); -webkit-transform: scale(1.5); -moz-transform: scale(1.5)}
+75%  {margin-top: 0; transform: scale(2.0); -webkit-transform: scale(2.0); -moz-transform: scale(2.0)}
+100% {margin-top: 5; transform: scale(1.0); -webkit-transform: scale(1.0); -moz-transform: scale(1.0)}
+}
+
+@keyframes wackity_wack
+{
+0%   {margin-left: 5px; transform: scale(1.0); -webkit-transform: scale(1.0);-moz-transform: scale(1.0)}
+25%  {margin-left: 0; transform: scale(2.0); -webkit-transform: scale(5.0); -moz-transform: scale(5.0);}
+50%  {margin-top: 5px; transform: scale(1.5); -webkit-transform: scale(1.5); -moz-transform: scale(1.5);}
+75%  {margin-top: 0; transform: scale(2.0); -webkit-transform: scale(3.0); -moz-transform: scale(3.0);}
+100% {margin-top: 5; transform: scale(1.0); -webkit-transform: scale(1.0); -moz-transform: scale(1.0);}
+}
+
+@keyframes more_wacky 
+{
+0% {margin-left: -50px; margin-top: -50px; border: 10px solid hotpink;}
+25% {margin-left: 0; margin-top: 0; border: 10px solid hotpink;}
+50% {margin-left: 50px; margin-top: 50px; border: 10px solid clear;}
+100% {margin-left: 0; margin-top: 0; border: 10px solid hotpink;}
+}
