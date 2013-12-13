@@ -1,5 +1,14 @@
 $(function (e){
-		
+
+	function generate_llama_sex() {
+		var m = new Markov(llama_sex_str);
+		llama_sex_array = m.generate(100).split(' ');
+		llama_sex_index = 0;
+	}
+	var llama_sex_array, llama_sex_index;
+	generate_llama_sex();
+
+
 	navigator.getUserMedia  = navigator.getUserMedia || navigator.webkitGetUserMedia ||
                               navigator.mozGetUserMedia || navigator.msGetUserMedia;
 	
@@ -55,4 +64,10 @@ $(function (e){
 	var interval;
 	interval = window.setInterval(doShit, 100); 
 
+	var tales_interval = window.setInterval(function() {
+		$('#tales').text(llama_sex_array[llama_sex_index])
+		llama_sex_index += 1
+		if(llama_sex_index >= llama_sex_array.length)
+			generate_llama_sex()
+	}, 300)
 });
