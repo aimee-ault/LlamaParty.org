@@ -23,7 +23,9 @@ function Markov(source) {
     
     this.generate = function(maxwords) {
         var generated = "";
-        var current_prefix = [MARKOV_SENTINEL_WORD, MARKOV_SENTINEL_WORD];
+        var keys = Object.keys(prefix_tab);
+        var current_prefix = 
+            keys[Math.floor(Math.random() * keys.length)].split(',');
         
         while(maxwords-- > 0) {
             var list = prefix_tab[current_prefix];  
