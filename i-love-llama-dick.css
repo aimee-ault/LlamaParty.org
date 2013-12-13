@@ -83,8 +83,10 @@ top: 120px;
 #tales {
     background-color: #ffffff;
     opacity: .8;
-    font-size: 1000%;
+    font-size: 400%;
     position: absolute;
     bottom: 0; left: 0;
     z-index: 9000;
+    padding: 0px;
+    margin: 0px;
 }
